@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia de MySQL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #9e1a1a, #000000);
+            color: #f1f1f1;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        h1, h3, p, nav, ul, li {
+            text-shadow: 1px 1px 2px #000000;
+            
+        }
+
+        h2 {
+        text-align: center;
+
+        }
+
+        h4 {
+        text-align: center;
+
+        }
+
+        h5 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f1f1f150;
+        }
+
+        h6 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f1f1f17c;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-left: 5px solid #42a5f5;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+
+        nav h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: #c4c4c4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+        pre, code {
+            text-shadow: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #e3f2fd;
+            font-family: monospace;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guia de Uso de MySQL</h1>
+
+        <nav>
+            <h3>Contenido</h3>
+            <ul>
+                <li><a href="#que-es">> Que es MySQL?</a></li>
+                <li><a href="#para-que-sirve">> Para que sirve?</a></li>
+                <li><a href="#codigos-basicos">> Codigos basicos de MySQL</a></li>
+            </ul>
+        </nav>
+        <section id="que-es">
+            <h2>Que es MySQL?</h2>
+            <p>
+                MySQL es un sistema de gestion de bases de datos relacional (RDBMS) de codigo abierto,
+                muy utilizado para almacenar, organizar y acceder a datos. Esta basado en el lenguaje SQL,
+                que es el lenguaje estandar para trabajar con bases de datos relacionales.
+            </p>
+        </section>
+
+        <div><img src="images.png"></div>
+
+        <section id="para-que-sirve">
+            <h2>Para que sirve?</h2>
+            <p>
+                MySQL sirve para gestionar y manipular bases de datos, lo que significa que te permite guardar,
+                organizar, consultar, modificar y eliminar informacion de forma estructurada.
+                Es una herramienta fundamental en el desarrollo de software y sitios web.
+            </p>
+        </section>
+        <div><img src="img1.jpg"></div>
+
+        <section id="codigos-basicos">
+            <h2>Codigos basicos de MySQL</h2>
+            <p>A continuacion, algunos comandos fundamentales:</p>
+
+            <h3>➣ Crear una base de datos</h3>
+            <pre>CREATE DATABASE nombre_base;</pre>
+
+            <h3>➣ Seleccionar una base de datos</h3>
+            <pre>USE nombre_base;</pre>
+
+            <h3>➣ Crear una tabla</h3>
+            <pre>
+CREATE TABLE nombre_tabla (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    campo1 TIPO,
+    campo2 TIPO
+);
+            </pre>
+
+            <h3>➣ Insertar datos en una tabla</h3>
+            <pre>
+INSERT INTO nombre_tabla (campo1, campo2)
+VALUES ('valor1', 'valor2');
+            </pre>
+
+            <h3>➣ Consultar todos los datos</h3>
+            <pre>SELECT * FROM nombre_tabla;</pre>
+
+            <h3>➣ Consultar datos con condicion</h3>
+            <pre>SELECT campo1 FROM nombre_tabla WHERE condicion;</pre>
+
+            <h3>➣ Actualizar datos existentes</h3>
+            <pre>
+UPDATE nombre_tabla
+SET campo1 = 'nuevo_valor'
+WHERE condicion;
+            </pre>
+
+            <h3>➣ Eliminar un registro</h3>
+            <pre>DELETE FROM nombre_tabla WHERE condicion;</pre>
+
+            <h3>➣ Eliminar una tabla</h3>
+            <pre>DROP TABLE nombre_tabla;</pre>
+
+            <h3>➣ Mostrar todas las bases de datos</h3>
+            <pre>SHOW DATABASES;</pre>
+
+            <h3>➣ Mostrar tablas en una base de datos</h3>
+            <pre>SHOW TABLES;</pre>
+
+            <h3>➣ Describir la estructura de una tabla</h3>
+            <pre>DESCRIBE nombre_tabla;</pre>
+        </section>
+    </div>
+
+     <section id="para-que-sirve">
+            <h2>Quieres saber más? Mira este video</h2>
+                <h4><iframe width="560" height="315" src="https://www.youtube.com/embed/NIBPw0oS1rY?si=liWNErGDXeJyc6CK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h4>
+        </section>
+
+    <section id="nombres">
+        <h6>Equipo</h6>
+        <ul>
+           
+            <h5>Jose Antonio Becerra Vega</h5>
+            <h5>Alvaro Esteban Rios Ramirez</h5>
+            <h5>Alan Rodolfo Castro Amezcua</h5>
+
+        </ul>
+    </section>
+
+</body>
+</html>
